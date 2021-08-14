@@ -21,14 +21,15 @@ START_TEXT = """
 Hello {}, Saya adalah bot google penerjemah.
 
 ▪ **Managed by:** [Ebnu](https://t.me/ebnudoang)
-▪ **Cara penggunaan:** [lihat disini](https://telegra.ph/file/4baec66975ada4aba7477.jpg)
+▪ **Cara penggunaan:** [lihat disini](https://telegra.ph/file/129d5beabc0005f3eda7d.mp4)
+▪ **Daftar kode bahasa:** [lihat disini](https://telegra.ph/-08-14-3100)
 """
 HELP_TEXT = """
 - Cukup kirim kata kata dengan kode bahasa
 
-example :- `Ini adalah contoh | en`
+Contoh :- `Hallo selamat pagi | en (kode bahasa)`
 
-Made by [Ebmu](https://t.me/ebnudoang)
+Made by [Ebnu](https://t.me/ebnudoang)
 """
 ABOUT_TEXT = """
 - **Bot :** `Translator Bot`
@@ -145,7 +146,7 @@ async def translate(bot, update):
                 await message.delete()
     except Exception as error:
         print(error)
-        await message.edit_text("Something wrong. Contact @TheFayas.")
+        await message.edit_text("Something wrong. Contact @ebnudoang.")
         return
 
 FayasNoushad.run()
