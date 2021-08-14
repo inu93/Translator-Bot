@@ -20,9 +20,8 @@ FayasNoushad = Client(
 START_TEXT = """
 Hello {}, Saya adalah bot google penerjemah.
 
-Made by @FayasNoushad
-▪**Managed by:** [Ebnu](https://t.me/ebnudoang)
-▪**Cara penggunaan:** [lihat disini](https://telegra.ph/file/4baec66975ada4aba7477.jpg)
+▪ **Managed by:** [Ebnu](https://t.me/ebnudoang)
+▪ **Cara penggunaan:** [lihat disini](https://telegra.ph/file/4baec66975ada4aba7477.jpg)
 """
 HELP_TEXT = """
 - Cukup kirim kata kata dengan kode bahasa
