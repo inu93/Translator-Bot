@@ -18,25 +18,24 @@ FayasNoushad = Client(
 )
 
 START_TEXT = """
-Hello {}, I am a google translator telegram bot.
+Hello {}, Saya adalah bot google penerjemah.
 
 Made by @FayasNoushad
+▪**Managed by:** [Ebnu](https://t.me/ebnudoang)
+▪**Cara penggunaan:** [lihat disini](https://telegra.ph/file/4baec66975ada4aba7477.jpg)
 """
 HELP_TEXT = """
-- Just send a text with language code
+- Cukup kirim kata kata dengan kode bahasa
 
-example :- `This is a sample text | ml`
+example :- `Ini adalah contoh | en`
 
-Made by @FayasNoushad
+Made by [Ebmu](https://t.me/ebnudoang)
 """
 ABOUT_TEXT = """
 - **Bot :** `Translator Bot`
-- **Creator :** [Fayas](https://telegram.me/TheFayas)
-- **Channel :** [Fayas Noushad](https://telegram.me/FayasNoushad)
-- **Source :** [Click here](https://github.com/FayasNoushad/Translator-Bot)
-- **Language :** [Python3](https://python.org)
-- **Library :** [Pyrogram](https://pyrogram.org)
-- **Server :** [Heroku](https://heroku.com)
+- **Creator :** [Ebnu](https://t.me/ebnudoang)
+- **Channel :** [Klik disini](https://t.me/Katakatauntukmu)
+- **Instagram :** [Klik disini](https://www.instagram.com/ebnu_am/)
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
@@ -54,8 +53,8 @@ HELP_BUTTONS = InlineKeyboardMarkup(
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Channel', url='https://telegram.me/FayasNoushad'),
-        InlineKeyboardButton('Feedback', url='https://telegram.me/TheFayas')
+        InlineKeyboardButton('Channel', url='https://t.me/katakatauntukmu'),
+        InlineKeyboardButton('Feedback', url='https://t.me/ebnudoang')
         ],[
         InlineKeyboardButton('Home', callback_data='home'),
         InlineKeyboardButton('Help', callback_data='help'),
@@ -69,7 +68,7 @@ CLOSE_BUTTON = InlineKeyboardMarkup(
     )
 TRANSLATE_BUTTON = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')
+        InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://t.me/katakatauntukmu')
         ]]
     )
 DEFAULT_LANGUAGE = os.environ.get("DEFAULT_LANGUAGE", "en")
@@ -129,7 +128,7 @@ async def translate(bot, update):
         translate = translator.translate(text, dest=language)
         translate_text = f"**Translated to {language}**"
         translate_text += f"\n\n{translate.text}"
-        translate_text += "\n\nMade by @FayasNoushad"
+        translate_text += "\n\nMade by @ebnudoang"
         if len(translate_text) < 4096:
             await message.edit_text(
                 text=translate_text,
@@ -141,7 +140,7 @@ async def translate(bot, update):
                 translate_file.name = language + ".txt"
                 await update.reply_document(
                     document=translate_file,
-                    caption="Made by @FayasNoushad",
+                    caption="Made by @ebnudoang",
                     reply_markup=TRANSLATE_BUTTON
                 )
                 await message.delete()
